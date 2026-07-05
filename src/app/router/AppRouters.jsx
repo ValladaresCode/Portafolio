@@ -6,7 +6,6 @@ import PortfolioAbout from '../../app/pages/PortfolioAbout.jsx';
 import PortfolioSkills from '../../app/pages/PortfolioSkills.jsx';
 import PortfolioProjects from '../../app/pages/PortfolioProjects.jsx';
 import PortfolioEducation from '../../app/pages/PortfolioEducation.jsx';
-import PortfolioContact from '../../app/pages/PortfolioContact.jsx';
 
 export const AppRoutes = () => {
   return (
@@ -19,7 +18,6 @@ export const AppRoutes = () => {
         <Route path="skills" element={<PortfolioSkills />} />
         <Route path="projects" element={<PortfolioProjects />} />
         <Route path="education" element={<PortfolioEducation />} />
-        <Route path="contact" element={<PortfolioContact />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/portfolio" replace />} />

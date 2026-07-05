@@ -159,12 +159,12 @@ export default function PortfolioProjects() {
             Visita mi GitHub para ver más proyectos y colaboraciones
           </p>
           <a
-            href="https://github.com"
+            href="https://github.com/ValladaresCode"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors"
           >
-            <Github size={20} />
+            <Globe2 size={20} />
             Ver en GitHub
           </a>
         </div>

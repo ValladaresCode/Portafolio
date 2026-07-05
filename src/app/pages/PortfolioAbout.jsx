@@ -1,105 +1,135 @@
+import { User, Mail, MapPin, Briefcase, Calendar, Phone, Target, TrendingUp, Rocket } from 'lucide-react';
+
 export default function PortfolioAbout() {
+  const generalInfo = [
+    { icon: User, label: 'Nombre', value: 'Roger Valladares', color: 'text-blue-400' },
+    { icon: Mail, label: 'Email', value: 'rvalladares@kinal.edu.gt', color: 'text-rose-400' },
+    { icon: MapPin, label: 'Ubicación', value: 'Guatemala, Ciudad de Guatemala', color: 'text-emerald-400' },
+    { icon: Briefcase, label: 'Experiencia', value: '+2 años de desarrollo', color: 'text-amber-400' },
+    { icon: Calendar, label: 'Disponibilidad', value: 'Inmediata (Freelance / Full-time)', color: 'text-purple-400' },
+    { icon: Phone, label: 'Teléfono', value: '+502 XXXX XXXX', color: 'text-indigo-400' }, // <-- Cambia por tu número real o tu usuario de Discord/Telegram
+  ];
+
+  const goals = [
+    {
+      icon: Target,
+      title: 'Corto Plazo',
+      description: 'Consolidar mis habilidades en React, optimización del Frontend y profundizar en la integración de interfaces dinámicas.',
+      iconColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Mediano Plazo',
+      description: 'Fortalecer la arquitectura Full Stack dominando el ecosistema de Spring Boot y el diseño estructurado de bases de datos.',
+      iconColor: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
+    },
+    {
+      icon: Rocket,
+      title: 'Largo Plazo',
+      description: 'Desplegar aplicaciones móviles multiplataforma nativas y liderar soluciones digitales optimizadas de extremo a extremo.',
+      iconColor: 'text-pink-400 bg-pink-500/10 border-pink-500/20',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white text-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+    <div className="min-h-screen bg-[#0f1123] text-slate-100 overflow-x-hidden selection:bg-blue-500 selection:text-white">
+      {/* Fondo Decorativo Sutil */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-gradient-to-br from-purple-500/5 to-blue-500/5 blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        
+        {/* Header de la Sección */}
+        <div className="mb-16 space-y-3">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white">
             Acerca de Mí
           </h1>
-          <p className="text-xl text-slate-600 border-l-4 border-blue-600 pl-4">
-            Desarrollador Web Full Stack apasionado por crear soluciones digitales
+          <p className="text-base md:text-lg text-slate-400 border-l-4 border-blue-500 pl-4 max-w-3xl leading-relaxed">
+            Desarrollador Full Stack Jr. apasionado por transformar lógicas complejas en interfaces completamente estructuradas, limpias y funcionales.
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          {/* Descripción */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">
+        {/* Contenido Principal */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          
+          {/* Descripción Personal */}
+          <div className="lg:col-span-7 space-y-6 text-left md:text-justify">
+            <h2 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
               ¿Quién Soy?
             </h2>
-            <p className="text-slate-700 leading-relaxed mb-4">
-              Soy un desarrollador web con pasión por crear interfaces limpias,
-              intuitivas y funcionales. Me especializo en transformar diseños en código
-              de calidad, utilizando las mejores prácticas de desarrollo.
-            </p>
-            <p className="text-slate-700 leading-relaxed mb-4">
-              Mi objetivo es crear soluciones que no solo sean visualmente atractivas,
-              sino también eficientes y escalables. Me encanta aprender nuevas
-              tecnologías y mantenerme actualizado con las tendencias del desarrollo web.
-            </p>
-            <p className="text-slate-700 leading-relaxed">
-              Cuando no estoy programando, me gusta colaborar en proyectos open source
-              y compartir conocimiento con la comunidad de desarrolladores.
-            </p>
-          </div>
-
-          {/* Info General */}
-          <div className="bg-slate-50 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-6">
-              Información General
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <p className="text-slate-600 font-semibold">Nombre</p>
-                <p className="text-slate-900">Tu Nombre Aquí</p>
-              </div>
-              <div>
-                <p className="text-slate-600 font-semibold">Email</p>
-                <p className="text-slate-900">tu@email.com</p>
-              </div>
-              <div>
-                <p className="text-slate-600 font-semibold">Ubicación</p>
-                <p className="text-slate-900">Tu Ciudad, País</p>
-              </div>
-              <div>
-                <p className="text-slate-600 font-semibold">Experiencia</p>
-                <p className="text-slate-900">2+ años en desarrollo web</p>
-              </div>
-              <div>
-                <p className="text-slate-600 font-semibold">Estado Actual</p>
-                <p className="text-slate-900">Disponible para nuevos proyectos</p>
-              </div>
-              <div>
-                <p className="text-slate-600 font-semibold">Teléfono</p>
-                <p className="text-slate-900">+1 (XXX) XXX-XXXX</p>
-              </div>
+            <div className="space-y-4 text-slate-400 text-sm md:text-base leading-relaxed font-normal">
+              <p>
+                Soy un desarrollador enfocado en el ecosistema web y móvil con un fuerte compromiso por la calidad del código y la experiencia del usuario. Mi formación me permite abordar proyectos desde la maquetación interactiva en el Frontend hasta la persistencia y seguridad de datos en el Backend.
+              </p>
+              <p>
+                Me especializo en traducir requerimientos lógicos en componentes modulares, limpios y fáciles de mantener. Disfruto enfrentando desafíos técnicos que me exijan optimizar el rendimiento de una aplicación o estructurar arquitecturas eficientes.
+              </p>
+              <p>
+                Me mantengo en constante evolución, explorando nuevas herramientas, metodologías ágiles y las mejores prácticas de la industria para garantizar que cada producto digital no solo sea visualmente atractivo, sino técnicamente sólido.
+              </p>
             </div>
           </div>
+
+          {/* Tarjeta de Información General */}
+          <div className="lg:col-span-5 bg-[#0e1022]/50 border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl backdrop-blur-sm relative group">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            
+            <h2 className="text-2xl font-bold text-white tracking-tight mb-6 relative z-10">
+              Información General
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+              {generalInfo.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="space-y-1">
+                    <div className="flex items-center gap-2 text-slate-500">
+                      <Icon size={16} className={item.color} />
+                      <span className="text-xs font-semibold tracking-wider uppercase">{item.label}</span>
+                    </div>
+                    <p className="text-sm font-medium text-slate-300 break-words">
+                      {item.value}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
 
-        {/* Metas y Aspiraciones */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-12 rounded-lg">
-          <h2 className="text-2xl font-semibold text-slate-900 mb-6">
+        {/* Sección de Metas y Aspiraciones con Micro-interacciones */}
+        <div className="bg-[#0b0c16]/60 border border-slate-900 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <h2 className="text-2xl font-bold text-white tracking-tight mb-8">
             Metas y Aspiraciones
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                emoji: '🎯',
-                title: 'Corto Plazo',
-                description: 'Consolidar mis habilidades en React y especializarme en desarrollo frontend moderno.',
-              },
-              {
-                emoji: '📈',
-                title: 'Mediano Plazo',
-                description: 'Convertirme en un desarrollador Full Stack competente y contribuir a proyectos impactantes.',
-              },
-              {
-                emoji: '🚀',
-                title: 'Largo Plazo',
-                description: 'Liderar equipos de desarrollo y crear productos que hagan diferencia en el mundo.',
-              },
-            ].map((goal) => (
-              <div key={goal.title}>
-                <div className="text-3xl mb-3">{goal.emoji}</div>
-                <h3 className="font-semibold mb-2">{goal.title}</h3>
-                <p className="text-slate-700">{goal.description}</p>
-              </div>
-            ))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {goals.map((goal, index) => {
+              const Icon = goal.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="flex flex-col space-y-4 p-6 rounded-2xl border border-slate-900 bg-[#0e1022]/40 hover:bg-[#0e1022]/80 hover:border-slate-800/80 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+                >
+                  <div className={`w-12 h-12 flex items-center justify-center rounded-xl border ${goal.iconColor}`}>
+                    <Icon size={22} />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="font-bold text-white text-lg tracking-tight">
+                      {goal.title}
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed font-normal">
+                      {goal.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
+
       </div>
     </div>
   );
