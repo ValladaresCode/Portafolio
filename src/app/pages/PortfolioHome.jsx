@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Database 
+import {
+  ArrowRight,
+  Monitor,
+  Smartphone,
+  Server,
+  Database
 } from 'lucide-react';
 import StatCard from '../../shared/components/ui/StatCard';
 import ServiceCard from '../../shared/components/ui/ServiceCard';
@@ -12,7 +12,7 @@ import ServiceCard from '../../shared/components/ui/ServiceCard';
 export default function PortfolioHome() {
   const stats = [
     { value: '15+', label: 'PROYECTOS' },
-    { value: '12+', label: 'HABILIDADES' },
+    { value: '10+', label: 'HABILIDADES' },
     { value: '2+', label: 'AÑOS EXP.' },
   ];
 
@@ -47,7 +47,7 @@ export default function PortfolioHome() {
       {/* Hero Section */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Columna Izquierda: Contenido Principal */}
           <div className="lg:col-span-7 space-y-8 text-left">
             <div className="space-y-4">
@@ -92,7 +92,7 @@ export default function PortfolioHome() {
             <div className="relative max-w-[480px] w-full group">
               {/* Brillo de fondo */}
               <div className="absolute inset-0 bg-blue-500/5 rounded-2xl blur-2xl group-hover:bg-blue-500/10 transition-all duration-500" />
-              
+
               {/* Estructura de la ventana de la terminal */}
               <div className="relative w-full bg-[#070913] border border-slate-800/80 rounded-2xl p-6 shadow-2xl font-mono text-xs sm:text-sm leading-relaxed text-slate-300 select-none">
                 {/* Barra superior del editor */}
@@ -142,7 +142,7 @@ export default function PortfolioHome() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
-              <ServiceCard 
+              <ServiceCard
                 key={service.title}
                 title={service.title}
                 description={service.description}

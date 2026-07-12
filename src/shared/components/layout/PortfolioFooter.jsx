@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Mail } from 'lucide-react';
+import { Mail, Briefcase } from 'lucide-react';
 
 export default function PortfolioFooter() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
-      label: 'Email',
-      // Usamos Lucide para el correo que sí funciona bien
-      renderIcon: () => <Mail size={18} />, 
-      link: 'mailto:rvalladares-2024060@kinal.edu.gt',
-      color: 'text-red-400 border-red-500/20 hover:bg-red-500/10'
+      label: 'Computrabajo',
+      renderIcon: () => <Briefcase size={18} />, 
+      link: 'https://candidato.gt.computrabajo.com/candidate/home',
+      color: 'text-cyan-400 border-cyan-500/20 hover:bg-cyan-500/10'
     },
     {
       label: 'GitHub',
@@ -35,7 +34,7 @@ export default function PortfolioFooter() {
           className="w-[18px] h-[18px] brightness-0 sepia-[100%] hue-rotate-[190%] saturate-[500%]"
         />
       ),
-      link: 'https://linkedin.com/in/tuusuario',
+      link: 'https://www.linkedin.com/in/roger-valladares-42758b421/',
       color: 'border-blue-500/20 hover:bg-blue-500/10'
     },
   ];

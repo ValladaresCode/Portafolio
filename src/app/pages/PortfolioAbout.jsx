@@ -70,28 +70,89 @@ export default function PortfolioAbout() {
           </div>
 
           {/* Tarjeta de Información General */}
-          <div className="lg:col-span-5 bg-[#0e1022]/50 border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl backdrop-blur-sm relative group">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            
-            <h2 className="text-2xl font-bold text-white tracking-tight mb-6 relative z-10">
-              Información General
-            </h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
-              {generalInfo.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={index} className="space-y-1">
-                    <div className="flex items-center gap-2 text-slate-500">
-                      <Icon size={16} className={item.color} />
-                      <span className="text-xs font-semibold tracking-wider uppercase">{item.label}</span>
+          <div className="lg:col-span-5 space-y-6">
+            <div className="bg-[#0e1022]/50 border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl backdrop-blur-sm relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              
+              <h2 className="text-2xl font-bold text-white tracking-tight mb-6 relative z-10">
+                Información General
+              </h2>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+                {generalInfo.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="space-y-1">
+                      <div className="flex items-center gap-2 text-slate-500">
+                        <Icon size={16} className={item.color} />
+                        <span className="text-xs font-semibold tracking-wider uppercase">{item.label}</span>
+                      </div>
+                      <p className="text-sm font-medium text-slate-300 break-words">
+                        {item.value}
+                      </p>
                     </div>
-                    <p className="text-sm font-medium text-slate-300 break-words">
-                      {item.value}
-                    </p>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Enlaces Profesionales Card */}
+            <div className="bg-[#0e1022]/50 border border-slate-800/80 rounded-2xl p-6 shadow-xl backdrop-blur-sm relative group">
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              
+              <h2 className="text-xl font-bold text-white tracking-tight mb-4 relative z-10 flex items-center gap-2">
+                <Briefcase size={18} className="text-blue-400" />
+                Perfiles Profesionales
+              </h2>
+              
+              <div className="flex flex-col gap-3 relative z-10">
+                <a
+                  href="https://github.com/ValladaresCode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3.5 bg-slate-950/40 border border-slate-800/60 rounded-xl hover:border-slate-500/50 hover:bg-slate-800/20 transition-all duration-300 group/link"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <img 
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" 
+                      alt="GitHub" 
+                      className="w-4 h-4 invert opacity-80 group-hover/link:opacity-100 transition-opacity"
+                    />
+                    <span className="text-xs font-semibold text-slate-300 group-hover/link:text-white transition-colors">GitHub</span>
                   </div>
-                );
-              })}
+                  <span className="text-[11px] text-slate-400 font-medium group-hover/link:translate-x-0.5 transition-transform">Ver Repos →</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/roger-valladares-42758b421/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3.5 bg-slate-950/40 border border-slate-800/60 rounded-xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 group/link"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <img 
+                      src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" 
+                      alt="LinkedIn" 
+                      className="w-4 h-4 brightness-0 sepia-[100%] hue-rotate-[190%] saturate-[500%]"
+                    />
+                    <span className="text-xs font-semibold text-slate-300 group-hover/link:text-white transition-colors">LinkedIn</span>
+                  </div>
+                  <span className="text-[11px] text-blue-400 font-medium group-hover/link:translate-x-0.5 transition-transform">Ver Perfil →</span>
+                </a>
+
+                <a
+                  href="https://candidato.gt.computrabajo.com/candidate/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3.5 bg-slate-950/40 border border-slate-800/60 rounded-xl hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 group/link"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Briefcase size={16} className="text-cyan-400" />
+                    <span className="text-xs font-semibold text-slate-300 group-hover/link:text-white transition-colors">Computrabajo</span>
+                  </div>
+                  <span className="text-[11px] text-cyan-400 font-medium group-hover/link:translate-x-0.5 transition-transform">Ver Candidato →</span>
+                </a>
+              </div>
             </div>
           </div>
 

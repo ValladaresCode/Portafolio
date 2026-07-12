@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Globe2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Globe2, Briefcase } from 'lucide-react';
 
 export default function PortfolioContact() {
   const [formData, setFormData] = useState({
@@ -180,7 +180,7 @@ export default function PortfolioContact() {
 
             <div className="space-y-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/roger-valladares-42758b421/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 border border-slate-300 rounded-lg hover:border-blue-600 hover:bg-blue-50 transition-colors group"
@@ -198,7 +198,7 @@ export default function PortfolioContact() {
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/ValladaresCode"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 border border-slate-300 rounded-lg hover:border-slate-900 hover:bg-slate-50 transition-colors group"
@@ -216,18 +216,20 @@ export default function PortfolioContact() {
               </a>
 
               <a
-                href="mailto:tu@email.com"
-                className="flex items-center gap-4 p-4 border border-slate-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition-colors group"
+                href="https://candidato.gt.computrabajo.com/candidate/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 border border-slate-300 rounded-lg hover:border-cyan-600 hover:bg-cyan-50 transition-colors group"
               >
-                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-green-600 transition-colors">
-                  <Mail
+                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-cyan-600 transition-colors">
+                  <Briefcase
                     size={24}
                     className="text-slate-900 group-hover:text-white transition-colors"
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900">Email Directo</h3>
-                  <p className="text-slate-600 text-sm">tu@email.com</p>
+                  <h3 className="font-semibold text-slate-900">Computrabajo</h3>
+                  <p className="text-slate-600 text-sm">Ver mi perfil de Computrabajo</p>
                 </div>
               </a>
             </div>
